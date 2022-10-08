@@ -1,6 +1,14 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const path = require("path")
 
+function getStyleLoader(arg){
+  return ["style-loader","css-loader",
+arg && {
+  loader: arg
+}
+].filter(Boolean)
+}
+
 module.exports = {
   entry:{
     index:path.join(__dirname,"../src/index.js")
@@ -12,8 +20,12 @@ module.exports = {
         loader:"babel-loader"
       },
       {
-        test:/\.css/,
-        use:["style-loader","css-loader"]
+        test:/\.css$/,
+        use:getStyleLoader()
+      },
+      {
+        test:/\.s[ac]ss$/,
+        use:getStyleLoader('sass-loader')
       }
     ]
   },
