@@ -1,9 +1,10 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniExtractPlugin = require("mini-css-extract-plugin")
 
 function getStyleLoader(arg) {
   return [
-    "style-loader",
+    MiniExtractPlugin.loader,
     "css-loader",
     {
       loader:"postcss-loader",
@@ -56,6 +57,7 @@ module.exports = {
       template: path.join(__dirname, "../public/index.html"),
       filename: "index.html",
     }),
+    new MiniExtractPlugin()
   ],
   resolve: {
     alias:{
