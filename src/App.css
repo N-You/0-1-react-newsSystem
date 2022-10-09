@@ -1,3 +1,6 @@
 .box{
-background-color: red
+background-color: red;
+display: flex;
+color: red;
+justify-content: center;
 }
