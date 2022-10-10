@@ -1,13 +1,13 @@
-import React from 'react'
-import './App.css'
-import './index.sass'
-function App(){
+import React from "react";
+import "./App.css";
+import "./index.sass";
+function App() {
   return (
-    <div className='box'>
+    <div className="box">
       123
-    {/* <img src="./assets/images/Ellipse.png"/> */}
+      {/* <img src="./assets/images/Ellipse.png"/> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

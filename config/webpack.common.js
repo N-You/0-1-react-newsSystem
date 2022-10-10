@@ -1,6 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniExtractPlugin = require("mini-css-extract-plugin")
+const ESLintWebpackPlugin = require("eslint-webpack-plugin")
+
+const { threads } = require("./webpack.prod")
 
 function getStyleLoader(arg) {
   return [
@@ -66,7 +69,13 @@ module.exports = {
       template: path.join(__dirname, "../public/index.html"),
       filename: "index.html",
     }),
-    new MiniExtractPlugin()
+    new MiniExtractPlugin(),
+    new ESLintWebpackPlugin({
+      context:path.resolve(__dirname,"../src"),
+      cache:true,
+      cacheLocation:path.resolve(__dirname,"../node_modules/.cache/eslintcache"),
+      threads
+    }),
   ],
   resolve: {
     alias:{

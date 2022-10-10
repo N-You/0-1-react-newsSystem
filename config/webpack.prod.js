@@ -5,6 +5,11 @@ const WebpackBar = require("webpackbar")
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin")
 const TerserWebpackPlugin = require("terser-webpack-plugin")
 
+const os = require("os");
+const threads = os.cpus().length;
+
+exports.threads
+
 module.exports = merge(common,{
   output:{
     path:path.join(__dirname,"../dist"),
@@ -26,6 +31,7 @@ module.exports = merge(common,{
             },
           },
           extractComments: false,
+          parallel:threads
         }
       ),
     ],

@@ -2,7 +2,7 @@ module.exports = {
   "presets": [
     ["@babel/preset-env",
     {
-      "useBuiltIns": 'entry',//按需加载自动引入
+      "useBuiltIns": 'entry',
       "corejs": "3.25.5"
     }],
     ["@babel/preset-react", {"runtime": "automatic"}],
