@@ -12,5 +12,6 @@ module.exports = merge(common,{
     port:8000,
     hot:true,
     historyApiFallback: true, // 解决前端路由刷新404问题
-  }
+  },
+  devtool: "cheap-module-source-map"
 })

@@ -49,7 +49,16 @@ module.exports = {
         generator:{
           filename:'static/images/[hash:10][ext]'
         }
+      },
+      {
+        test: /\.(ttf|woff2?|mp3|mp4|avi)$/,
+        type: 'asset/resource',
+      generator: {
+        // 输出图片名称
+        //[hash:10]取文件前10位
+        filename: 'static/media/[hash:10][ext][query]'
       }
+      },
     ],
   },
   plugins: [
