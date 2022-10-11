@@ -20,20 +20,21 @@ module.exports = merge(common, {
   plugins: [
     new WebpackBar(),
     new MiniExtractPlugin(),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, '../public'),
-    //       to: path.resolve(__dirname, '../dist'),
-    //       toType: 'dir',
-    //       globOptions: {
-    //         dot: true, // 允许匹配以 . 开头的文件, 比如 .gitignore
-    //         gitignore: false,
-    //         ignore: ['**/index.html'],
-    //       },
-    //     },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../public'),
+          to: path.resolve(__dirname, '../dist'),
+          toType: 'dir',
+          noErrorOnMissing: true,
+          globOptions: {
+            dot: true, // 允许匹配以 . 开头的文件, 比如 .gitignore
+            gitignore: false,
+            ignore: ['**/index.html'],
+          },
+        },
+      ],
+    }),
   ],
   optimization: {
     minimizer: [
