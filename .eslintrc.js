@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "browser": true,
     "es2021": true,
@@ -9,9 +9,20 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+      },
+      "typescript": {}
+    }
+  },
   "rules": {
     "no-var": 2
   }
