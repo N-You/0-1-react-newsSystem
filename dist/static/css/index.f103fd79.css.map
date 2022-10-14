@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/index.f103fd79.css","mappings":"AAAA,GAEE,sBADA,UACA","sources":["webpack://newssystem/./src/App.sass"],"sourcesContent":["li\r\n  width: 100%\r\n  background-color: yellow\r\n"],"names":[],"sourceRoot":""}

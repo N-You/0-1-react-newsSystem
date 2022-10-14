@@ -1,1 +1,0 @@
-{"version":3,"file":"index.css","mappings":"AAAA,KAIA,uBAAuB,CAAvB,oBAAuB,CAHvB,oBAAqB,CAErB,UAAY,CADZ,mBAAa,CAAb,mBAAa,CAAb,YAAa,CAEb,sBACA","sources":["webpack://newssystem/./src/App.css"],"sourcesContent":[".box{\r\nbackground-color: red;\r\ndisplay: flex;\r\ncolor: white;\r\njustify-content: center;\r\n}\r\n"],"names":[],"sourceRoot":""}

@@ -92,6 +92,22 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          test: /node_modules/,
+          name: 'vendors',
+          minChunks: 1,
+          chunks: 'initial',
+          minSize: 0,
+          priority: 1,
+        },
+        commons: {
+          name: 'commons',
+          minChunks: 2,
+          chunks: 'initial',
+          minSize: 0,
+        },
+      },
     },
     runtimeChunk: {
       name: (entrypoint) => `runtime~${entrypoint.name}.[contenthash:10].js`,
@@ -101,6 +117,7 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, '../src'),
     },
+    modules: [path.resolve(__dirname, '../node_modules')],
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
 }
