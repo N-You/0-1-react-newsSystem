@@ -1,9 +1,10 @@
-import { Spin } from 'antd';
 import React, { FC } from 'react'
+import { Button } from 'antd'
 
 const Home: FC = () => (
   <>
-    <Spin />
+    HOME
+    <Button>Default Button</Button>
   </>
 )
 
