@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
-import { Button } from 'antd'
+// import { Button } from 'antd'
 
 const Home: FC = () => (
   <>
     HOME
-    <Button>Default Button</Button>
+    {/* <Button>Default Button</Button> */}
   </>
 )
 

@@ -9,10 +9,12 @@ import RoleList from '@/commponents/right-manage/RoleList'
 import UserList from '@/commponents/user-manage/UserList'
 import Home from '@/commponents/home/Home'
 import Nopermisson from '@/pages/newsSandBox/nopermisson'
+import UseRC from '@/pages/TestPage/useRC'
 export default function IndexRouter() {
   return (
     <HashRouter>
       <Routes>
+        <Route path='/Test' element={<UseRC />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/sandBox' element={<NewsSandBox />}>
           <Route index element={<Home />}></Route>
